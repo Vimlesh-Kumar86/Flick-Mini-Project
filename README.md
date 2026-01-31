@@ -16,12 +16,12 @@ Main features:
 
 ## Team Members
 
-- **Vimlesh Kumar** – Web Developer  
-- **Vaibhav Mishra** – UI/UX Designer  
-- **Naveen Kumar** – Frontend Developer  
+- **Vimlesh Kumar** – Fullstack Developer  
+- **Vaibhav Mishra** – Mern Developer    
+- **Naveen Kumar** – Backend Developer  
 
 Location: Delhi, India  
-Year: 2023–2026
+Year: 2023
 
 ## Technologies Used
 
