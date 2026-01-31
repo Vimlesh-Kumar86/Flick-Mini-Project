@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Sign up for Flick - Join the gaming community, watch streams, and compete"
+    />
+    <title>Flick - Sign Up</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/Home.css" />
+    <link rel="stylesheet" href="assets/css/signup.css" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="top">
+      <a href="index.html">
+        <img
+          id="logo"
+          src="/assets/images/Flick logo.png"
+          alt="Flick - Gaming & Streaming Platform Logo"
+        />
+      </a>
+
+      <div class="search-container">
+        <i
+          class="fa-solid fa-magnifying-glass search-icon"
+          aria-hidden="true"
+        ></i>
+        <input
+          id="search"
+          type="search"
+          placeholder="Search videos..."
+          aria-label="Search videos"
+        />
+      </div>
+
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="signup.html" aria-current="page"><strong>Sign Up</strong></a>
+      </nav>
+
+      <button id="mode" type="button" aria-label="Toggle dark/light mode">
+        Dark Mode
+      </button>
+    </header>
+
+
+    <!-- Main Content -->
+    <main class="signup-content">
+      <section class="signup-container">
+        <div class="signup-form">
+          <h2>Create Your Account</h2>
+          <form id="signup-form" novalidate>
+            <div class="form-group">
+              <label for="username" class="sr-only">Username</label>
+              <input
+                type="text"
+                id="username"
+                name="username"
+                placeholder="Username"
+                required
+                autocomplete="username"
+                aria-required="true"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email" class="sr-only">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Email"
+                required
+                autocomplete="email"
+                aria-required="true"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="password" class="sr-only">Password</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Password"
+                required
+                autocomplete="new-password"
+                aria-required="true"
+                minlength="6"
+              />
+              <small>Minimum 6 characters</small>
+            </div>
+
+            <div class="form-group">
+              <label for="confirm-password" class="sr-only"
+                >Confirm Password</label
+              >
+              <input
+                type="password"
+                id="confirm-password"
+                name="confirm-password"
+                placeholder="Confirm Password"
+                required
+                autocomplete="new-password"
+                aria-required="true"
+              />
+            </div>
+
+            <button type="submit" id="signup-button">Sign Up</button>
+
+            <p class="login-link">
+              Already have an account? <a href="userlogin.html">Log In</a>
+            </p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2023. All rights reserved.</p>
+      <div class="social-links" aria-label="Social links">
+        <a
+          href="https://www.youtube.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="YouTube"
+        >
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+        <a href="mailto:support@flick.com" aria-label="Email support">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+        <a
+          href="https://www.google.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Google"
+        >
+          <i class="fa-brands fa-google"></i>
+        </a>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.9/xlsx.full.min.js"></script>
+    <script src="/assets/js/signup.js"></script>
+
+    <!-- Fallback inline script (dark mode, sidebar, basic form validation) -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Dark mode toggle
+        const modeBtn = document.getElementById("mode");
+        if (modeBtn) {
+          modeBtn.addEventListener("click", () => {
+            document.body.classList.toggle("dark-mode");
+            modeBtn.textContent = document.body.classList.contains("dark-mode")
+              ? "Light Mode"
+              : "Dark Mode";
+          });
+        }
+
+        // Sidebar navigation (basic fallback)
+        document.querySelectorAll(".sidebar i[title]").forEach((icon) => {
+          icon.addEventListener("click", () => {
+            const title = icon.getAttribute("title");
+            if (title === "Home") window.location.href = "index.html";
+            if (title === "Profile") window.location.href = "userlogin.html";
+            if (title === "Settings") alert("Settings page coming soon!");
+          });
+        });
+
+        // Search input (basic alert fallback)
+        const searchInput = document.getElementById("search");
+        if (searchInput) {
+          searchInput.addEventListener("keypress", (e) => {
+            if (e.key === "Enter" && searchInput.value.trim()) {
+              alert(`Searching for: ${searchInput.value.trim()}`);
+              searchInput.value = "";
+            }
+          });
+        }
+
+        // Signup form basic validation + success message
+        const form = document.getElementById("signup-form");
+        if (form) {
+          form.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            const username = document.getElementById("username")?.value.trim();
+            const email = document.getElementById("email")?.value.trim();
+            const password = document.getElementById("password")?.value.trim();
+            const confirm = document
+              .getElementById("confirm-password")
+              ?.value.trim();
+
+            if (!username || !email || !password || !confirm) {
+              alert("Please fill in all required fields.");
+              return;
+            }
+
+            if (password.length < 6) {
+              alert("Password must be at least 6 characters long.");
+              return;
+            }
+
+            if (password !== confirm) {
+              alert("Passwords do not match.");
+              return;
+            }
+
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+              alert("Please enter a valid email address.");
+              return;
+            }
+
+            alert(
+              `Sign Up successful!\n\nUsername: ${username}\nEmail: ${email}\nPassword: [hidden for security]`,
+            );
+
+            form.reset();
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

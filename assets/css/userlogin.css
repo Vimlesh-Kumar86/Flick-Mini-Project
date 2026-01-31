@@ -1,0 +1,151 @@
+.login-hero {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    background: url('flickss.jpg') no-repeat center/cover;
+    margin-bottom: 20px;
+}
+
+.login-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.login-overlay h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.login-overlay p {
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+.login-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    background-color: #2a2e2a;
+    border-radius: 10px;
+    padding: 25px;
+    min-height: 450px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.login-form {
+    width: 100%;
+    max-width: 320px; /* Reduced from 400px to make the login card narrower */
+    padding: 25px;
+    text-align: center;
+}
+
+.login-form h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0; /* Increased from 10px to 15px to add more space between username and password fields */
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+.login-form input:focus {
+    outline: none;
+    background-color: #444;
+}
+
+.login-form button {
+    padding: 10px 20px;
+    background-color: #f72585;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-form button:hover {
+    background-color: #7209b5;
+}
+
+.signup-link {
+    font-size: 1rem;
+    color: #ccc;
+    margin-top: 15px;
+}
+
+.signup-link a {
+    color: #f72585;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.signup-link a:hover {
+    color: #7209b5;
+}
+
+@media (max-width: 1024px) {
+    .login-overlay h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .login-hero {
+        height: 50vh;
+    }
+    .login-container {
+        padding: 15px;
+        min-height: 400px;
+    }
+    .login-form {
+        padding: 15px;
+        max-width: 280px; /* Adjusted for smaller screens to maintain narrower width */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,123 @@
+.signup-hero {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    background: url('flickss.jpg') no-repeat center/cover;
+    margin-bottom: 20px;
+}
+
+.signup-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.signup-overlay h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.signup-overlay p {
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+.signup-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.signup-container {
+    display: flex;
+    justify-content: center;
+    background-color: #2a2e2a;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.signup-form {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    text-align: center;
+}
+
+.signup-form h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.signup-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+.signup-form input:focus {
+    outline: none;
+    background-color: #444;
+}
+
+.signup-form button {
+    padding: 10px 20px;
+    background-color: #f72585;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.signup-form button:hover {
+    background-color: #7209b5;
+}
+
+.login-link {
+    font-size: 1rem;
+    color: #ccc;
+    margin-top: 15px;
+}
+
+.login-link a {
+    color: #f72585;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.login-link a:hover {
+    color: #7209b5;
+}
+
+@media (max-width: 1024px) {
+    .signup-overlay h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .signup-hero {
+        height: 50vh;
+    }
+    .signup-container {
+        padding: 10px;
+    }
+    .signup-form {
+        padding: 10px;
+    }
+}
